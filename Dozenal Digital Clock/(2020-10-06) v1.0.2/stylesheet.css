@@ -1,0 +1,15 @@
+h1 {
+	font-size: 50px;
+	font-weight: normal;
+}
+h1 span {
+	font-size: 15px;
+	font-weight: normal;
+}
+div {
+	display: inline-block;
+}
+#col{
+	font-size: 400px;
+	font-weight: normal;
+}

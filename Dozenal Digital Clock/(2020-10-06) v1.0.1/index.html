@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Dozenal Clock</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+	<script src="src/jquery-hex-colorpicker.js"></script>
+	<link rel="stylesheet" href="jquery-hex-colorpicker.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  	<script src="js/mobileCode.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="src/jquery-hex-colorpicker.min.js"></script>
+	<link rel="stylesheet" href="css/jquery-hex-colorpicker.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+	<script type="text/javascript">
+jQuery(function(){
+  jQuery("#color-picker1").hexColorPicker();
+    jQuery(".color-picker").hexColorPicker({
+    "container":"dialog",
+  });
+    jQuery("#color-picker2").hexColorPicker({
+    "container":"dialog",
+    "colorModel":"hsl",
+    "pickerWidth":400,
+    "size":15,
+    "style":"box",
+    "outputFormat":"<hexcode>",
+  });
+});
+</script>
+</head>
+<body onLoad="startTime()">
+	<center>
+		<h1>Dozenal Clock <span>Built by: Asterisk (2020-10-06)</span></h1>
+		<div class="background">
+	        <div class="display">
+	            <!-- Upper left/right sides and tops -->
+	            <div class="hrpt1" id="A7"></div>
+	            <div class="hrpt1top" id="A1"></div>
+	            <div class="hrpt1" id="A2"></div>
+	            <div class="hrpt2" id="B7"></div>
+	            <div class="hrpt2top" id="B1"></div>
+	            <div class="hrpt2" id="B2"></div>
+	            <div class="minpt1" id="C7"></div>
+	            <div class="minpt1top" id="C1"></div>
+	            <div class="minpt1" id="C2"></div>
+	            <div class="minpt2" id="D7"></div>
+	            <div class="minpt2top" id="D1"></div>
+	            <div class="minpt2" id="D2"></div>
+	            <div class="secpt1" id="E7"></div>
+	            <div class="secpt1top" id="E1"></div>
+	            <div class="secpt1" id="E2"></div>
+	            <div class="secpt2" id="F7"></div>
+	            <div class="secpt2top" id="F1"></div>
+	            <div class="secpt2" id="F2"></div>
+	            </br>
+	            <!-- Bottom left/right sides and middles -->
+	            <div class="hrpt3" id="A6"></div>
+	            <div class="hrpt1mid" id="A3"></div>
+	            <div class="hrpt3" id="A4"></div>
+	            <div class="hrpt4" id="B6"></div>
+	            <div class="hrpt2mid" id="B3"></div>
+	            <div class="hrpt4" id="B4"></div>
+	            <div class="minpt3" id="C6"></div>
+	            <div class="minpt1mid" id="C3"></div>
+	            <div class="minpt3" id="C4"></div>
+	            <div class="minpt4" id="D6"></div>
+	            <div class="minpt2mid" id="D3"></div>
+	            <div class="minpt4" id="D4"></div>
+	            <div class="secpt3" id="E6"></div>
+	            <div class="secpt1mid" id="E3"></div>
+	            <div class="secpt3" id="E4"></div>
+	            <div class="secpt4" id="F6"></div>
+	            <div class="secpt2mid" id="F3"></div>
+	            <div class="secpt4" id="F4"></div>
+	            </br >
+	            <!-- Bottoms -->
+	            <div class="hrpt1btm" id="A5"></div>
+	            <div class="hrpt2btm" id="B5"></div>
+	            <div class="minpt1btm" id="C5"></div>
+	            <div class="minpt2btm" id="D5"></div>
+	            <div class="secpt1btm" id="E5"></div>
+	            <div class="secpt2btm" id="F5" data-rel="popup"></div>
+	            </br >
+	            <div id="col1">.</div>
+	            <div id="col2">.</div>
+	            <div id="col3">.</div>
+	            <div id="col4">.</div>
+	            <br />
+	            <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+					<div class="A" id="1" onClick="stopThePress();onlyMe(this.id);"></div>
+				</a>
+				<a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+				    <div class="B" id="2" onClick="stopThePress();onlyMe(this.id);"></div>
+				</a>
+			    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+			    	<div class="C" id="3" onClick="stopThePress();onlyMe(this.id);"></div>
+			    </a>
+			    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+			    	<div class="D" id="4" onClick="stopThePress();onlyMe(this.id);"></div>
+			    </a>
+			    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+			    	<div class="E" id="5" onClick="stopThePress();onlyMe(this.id);"></div>
+			    </a>
+			    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade">
+			    	<div class="F" id="6" onClick="stopThePress();onlyMe(this.id);"></div>
+			    </a>
+			    <div data-role="main" class="ui-content" id="pullUp">
+				    <div data-role="popup" id="myPopupDialog">
+				      <div data-role="header">
+				      	<div class="redX">
+				      		<a href="#"  data-rel="back"><img src="redX.png" id="redX"/></a>
+				      	</div>
+				        <h1>Color Picker</h1>
+				      </div>
+				      <div data-role="main" class="ui-content">
+					    <p>Click the input below to activate the Color Picker!</p>
+					    <input type="text" id="color-picker1" style="color: rgb(255, 255, 255); background-color: rgb(0, 142, 255);">
+					    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back" onClick="resume();">Submit Color</a>
+				      </div>
+				    </div>
+				    <p>Or, input your color manualy below!</p>
+					<input type="text" id="hexValue" value="FF0000" style="width: 60px;" /></input>
+					<button onClick="appToAll();resume();">Apply to all</button>
+					<button onClick="reset();">Reset Values</button>
+				</div>	
+	        </div>
+	    </div>
+	</center>
+</body>
+</html>
